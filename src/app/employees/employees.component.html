@@ -1,0 +1,14 @@
+<div class="container mt-5">
+    <h1 class="mb-3">Ag-Grid Angular</h1>
+    
+    <button class="btn btn-success mb-3" routerLink="/employees-form"><i class="bi bi-plus-square text-warning"></i> New Employees</button>
+
+    <input type="text" placeholder="Search...." class="form-control mb-3" (keyup)="search($event)">
+
+    <ag-grid-angular
+        style="width: 100%; height: 400px;" 
+        class="ag-theme-alpine" 
+        [rowData]="rowData"
+        [columnDefs]="columnDefs">
+    </ag-grid-angular>
+</div>

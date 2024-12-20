@@ -1,0 +1,37 @@
+<div class="container mt-3">
+    <h1 class="mb-4">Employee Form</h1>
+    <div>
+        <form [formGroup]="employeeForm">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="id">ID</label>
+                    <input type="number" placeholder="Enter Id" class="form-control" formControlName="id">
+                </div>
+                <div class="col-md-4">
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Enter Name" class="form-control" formControlName="name">
+                </div>
+                <div class="col-md-4">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Enter Email" class="form-control" formControlName="email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mt-3">
+                    <label for="salary">Salary</label>
+                    <input type="number" placeholder="Enter Salary" class="form-control" formControlName="salary">
+                </div>
+                <div class="col-md-4 mt-3">
+                    <label for="designation">Designation</label>
+                    <input type="text" placeholder="Enter Designation" class="form-control" formControlName="designation">
+                </div>
+                <div class="col-md-4 mt-3">
+                    <label for="country">Country</label>
+                    <input type="text" placeholder="Enter Country" class="form-control" formControlName="country">
+                </div>
+            </div>
+        </form>
+        <button type="button" class="btn btn-primary mt-5" (click)="onSubmit()">{{employeeId ? 'Update' : 'Add'}}</button>
+        <button type="button" class="btn btn-secondary mx-3 mt-5" routerLink="/employees">Cancel</button>
+    </div>
+</div>
